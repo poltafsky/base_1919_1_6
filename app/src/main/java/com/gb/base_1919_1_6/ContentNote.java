@@ -11,9 +11,13 @@ import androidx.fragment.app.Fragment;
 
 public class ContentNote extends Fragment {
 
+    public static final String ARG_NOTES = "notes";
+    private Notes notes;
 
-    public static ContentNote newInstance() {
+    public static ContentNote newInstance(Notes notes) {
         ContentNote fragment = new ContentNote();
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(ARG_NOTES,notes);
         return fragment;
     }
 
@@ -27,5 +31,8 @@ public class ContentNote extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+       notes = getArguments().getParcelable(ARG_NOTES);
+       view.findViewById()
+
     }
 }

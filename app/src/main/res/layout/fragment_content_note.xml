@@ -6,5 +6,35 @@
     android:orientation="vertical"
     tools:context=".ListNotes">
 
+    <TextView
+        android:id="@+id/nameNotes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:text="Название заметки"
+        android:textSize="@dimen/nameNote_size">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:text="дата создания заметки"
+        android:textSize="@dimen/date_notes_size">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textNotes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:text="текст заметки"
+        android:textSize="@dimen/text_notes_size">
+
+    </TextView>
+
 
 </LinearLayout>

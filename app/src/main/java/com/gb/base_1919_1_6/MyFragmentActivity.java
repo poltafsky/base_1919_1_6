@@ -13,10 +13,10 @@ public class MyFragmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState==null){
-            ListNotes listNotes= new ListNotes();
+            ListNotes listNotes=ListNotes.newInstance();
             getSupportFragmentManager().beginTransaction().replace(R.id.list,listNotes).commit();
             if(getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE){
-                ContentNote contentNote = new ContentNote();
+                ContentNote contentNote = ContentNote.newInstance();
                 getSupportFragmentManager().beginTransaction().replace(R.id.content,contentNote);
         }
         }
