@@ -18,6 +18,7 @@ public class ContentNote extends Fragment {
         ContentNote fragment = new ContentNote();
         Bundle bundle = new Bundle();
         bundle.putParcelable(ARG_NOTES,notes);
+        fragment.setArguments(bundle);
         return fragment;
     }
 
