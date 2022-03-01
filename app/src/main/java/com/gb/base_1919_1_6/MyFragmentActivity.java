@@ -16,8 +16,9 @@ public class MyFragmentActivity extends AppCompatActivity {
             ListNotes listNotes=ListNotes.newInstance();
             getSupportFragmentManager().beginTransaction().replace(R.id.list,listNotes).commit();
             if(getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE){
-                ContentNote contentNote = ContentNote.newInstance();
-                getSupportFragmentManager().beginTransaction().replace(R.id.content,contentNote);
+                Note defaulNote = new Note("note #1",R.array.notes_description);
+                ContentNote contentNote = ContentNote.newInstance(defaulNote);
+                getSupportFragmentManager().beginTransaction().replace(R.id.content,contentNote).commit();
         }
         }
     }

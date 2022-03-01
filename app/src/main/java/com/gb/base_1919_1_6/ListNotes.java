@@ -32,7 +32,7 @@ public class ListNotes extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        String[] notes = getResources().getStringArray(R.array.notes);
+        String[] notes = getResources().getStringArray(R.array.note);
 
         for (int i = 0; i<notes.length;i++){
             String noteName = notes[i];

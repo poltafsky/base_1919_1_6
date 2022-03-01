@@ -3,26 +3,27 @@ package com.gb.base_1919_1_6;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Notes implements Parcelable {
+public class Note implements Parcelable {
+    private  int Index;
     private String name;
     private String description;
     private int DateOfCreation;
 
-    protected Notes(Parcel in) {
+    protected Note(Parcel in) {
         name = in.readString();
         description = in.readString();
         DateOfCreation = in.readInt();
     }
 
-    public static final Creator<Notes> CREATOR = new Creator<Notes>() {
+    public static final Creator<Note> CREATOR = new Creator<Note>() {
         @Override
-        public Notes createFromParcel(Parcel in) {
-            return new Notes(in);
+        public Note createFromParcel(Parcel in) {
+            return new Note(in);
         }
 
         @Override
-        public Notes[] newArray(int size) {
-            return new Notes[size];
+        public Note[] newArray(int size) {
+            return new Note[size];
         }
     };
 
@@ -61,5 +62,19 @@ public class Notes implements Parcelable {
         parcel.writeString(name);
         parcel.writeString(description);
         parcel.writeInt(DateOfCreation);
+    }
+
+
+    public int getIndex() {
+        return Index;
+    }
+
+    public void setIndex(int index) {
+        Index = index;
+    }
+
+    public Note (String name, int index){
+        this.name = name;
+        this.Index = index;
     }
 }
